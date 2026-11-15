@@ -1,7 +1,6 @@
-{
-  "name": "REF",
+"name": "REF",
   "short_name": "REF",
-  "description": "Kumpulan game santai: Gabung, Menara, Lincah, Cocok, Ingat, Hitung, Kata",
+  "description": "Kumpulan game santai: Gabung, Menara, Lincah, Cocok, Ingat, Hitung, Kata, Block Blast",
   "lang": "id",
   "start_url": "./",
   "scope": "./",
