@@ -1,7 +1,6 @@
 // Naikkan angka versi ini setiap kali kamu update game (biar HP pemain sadar ada versi baru)
-const CACHE='ref-v11';
-const CORE=['./','index.html','manifest.json','icon-192.png','icon-512.png','icon-maskable-512.png'];
-const FONT_HOSTS=['fonts.googleapis.com','fonts.gstatic.com'];
+const CACHE='ref-v13';
+const CORE=['./','index.html','manifest.json','icon-192.png','icon-512.png','icon-maskable-512.png','fonts/manrope-500.woff2','fonts/manrope-700.woff2','fonts/cormorant-600-italic.woff2'];
 
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));
@@ -14,7 +13,7 @@ self.addEventListener('fetch',e=>{
   if(r.method!=='GET')return;
   const u=new URL(r.url);
   const same=u.origin===location.origin;
-  if(!same&&!FONT_HOSTS.includes(u.hostname))return;
+  if(!same)return;
   // halaman utama: ambil versi terbaru dulu, kalau offline pakai cache
   if(r.mode==='navigate'){
     e.respondWith(fetch(r).then(res=>{const c=res.clone();caches.open(CACHE).then(x=>x.put(r,c));return res}).catch(()=>caches.match(r).then(m=>m||caches.match('index.html'))));
