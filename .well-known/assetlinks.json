@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.aryamaulanadwi03_svg.twa",
+    "sha256_cert_fingerprints": ["63:D7:F5:F3:91:4E:DC:E7:AB:2F:FC:6E:87:07:7D:71:D9:E3:C4:E6:AB:DF:DA:C1:46:D4:10:AA:A4:89:A0:8A"]
+  }
+}]
