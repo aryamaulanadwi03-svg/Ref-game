@@ -97,14 +97,26 @@ installBtn.addEventListener('click', async () => {
 
 // Tombol Bagikan
 document.getElementById('shareBtn').addEventListener('click', async () => {
-  const url = 'https://supernovastudioo.github.io/Ref-game/link.html';
-  const text = 'REF GAME - Mainkan. Simpan. Lanjutkan di mana saja.';
-  if (navigator.share) {
-    try { await navigator.share({title:'REF GAME', text:text, url:url}); } catch(e){}
-  } else {
-    navigator.clipboard.writeText(url);
-    alert('Link sudah disalin! Tinggal paste ke WA / TikTok.');
-  }
+  const shareText = `🎮 REF GAME - GAME BARU!
+
+REF adalah kumpulan banyak permainan buat nemenin waktu istirahat lu. Satu link, banyak game. Gabut jadi seru, istirahat jadi nggak ngebosenin.
+
+⚡ Tanpa download, langsung main!
+💾 Progress ke-save otomatis!
+
+📲 CARA INSTALL:
+🤖 Android: Ketuk INSTALL APLIKASI
+🍎 iPhone: Bagikan ⤴️ > Add to Home Screen
+
+🔥 Coba sekarang:
+https://supernovastudioo.github.io/Ref-game/link.html`;
+
+if (navigator.share) {
+  navigator.share({ text: shareText });
+} else {
+  navigator.clipboard.writeText(shareText);
+  alert('Teks sudah disalin, tinggal paste!');
+}
 });
 </script>
 </body>
