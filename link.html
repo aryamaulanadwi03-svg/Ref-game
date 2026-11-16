@@ -10,7 +10,6 @@
 <meta property="og:title" content="REF GAME">
 <meta property="og:description" content="Mainkan. Simpan. Lanjutkan di mana saja.">
 <meta property="og:image" content="https://supernovastudioo.github.io/Ref-game/icon-512.png">
-<meta property="og:type" content="website">
 <link rel="apple-touch-icon" href="icon-512.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
@@ -21,10 +20,12 @@ body{background:#0a0a0a;color:#fff;min-height:100vh;background:linear-gradient(1
 h1{font-size:44px;line-height:1;margin:8px 0 10px;letter-spacing:-1px}
 h1 span{background:linear-gradient(90deg,#a855f7,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sub{color:#d4d4d8;font-size:15.5px;line-height:1.5;margin-bottom:24px}
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border-radius:999px;text-decoration:none;font-weight:800;font-size:17px;margin-bottom:12px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border-radius:999px;text-decoration:none;font-weight:800;font-size:17px;margin-bottom:12px;border:none;cursor:pointer}
 .btn-main{background:#fff;color:#000}
+.btn-install{background:linear-gradient(90deg,#a855f7,#f97316);color:#fff}
+.btn-share{background:#25D366;color:#fff}
 .btn:active{transform:scale(.97)}
-.card{background:#0ea5e9;color:#fff;border-radius:18px;padding:20px;text-align:left}
+.card{background:#0ea5e9;color:#fff;border-radius:18px;padding:20px;text-align:left;margin-top:4px}
 .card-title{font-size:16px;font-weight:800;text-align:center;letter-spacing:1px;margin-bottom:16px;text-transform:uppercase}
 .card h3{font-size:16px;margin:14px 0 8px;display:flex;align-items:center;gap:8px}
 .card h3:first-of-type{margin-top:0}
@@ -33,6 +34,7 @@ h1 span{background:linear-gradient(90deg,#a855f7,#f97316);-webkit-background-cli
 .card li b{color:#fff}
 .card .note{margin-top:14px;font-size:13px;line-height:1.5;color:#e0f2fe;border-top:1px solid rgba(255,255,255,.25);padding-top:12px}
 .footer{margin-top:20px;font-size:11px;color:#71717a}
+#installBtn{display:none}
 </style>
 </head>
 <body>
@@ -43,15 +45,17 @@ h1 span{background:linear-gradient(90deg,#a855f7,#f97316);-webkit-background-cli
   <p class="sub">Mainkan. Simpan. Lanjutkan di mana saja.</p>
 
   <a href="index.html" class="btn btn-main">▶ &nbsp;MAIN SEKARANG</a>
+  <button id="installBtn" class="btn btn-install">⬇ &nbsp;INSTALL APLIKASI</button>
+  <button id="shareBtn" class="btn btn-share">↗ &nbsp;BAGIKAN LINK</button>
 
   <div class="card">
     <div class="card-title">Cara Install / Pemasangan</div>
 
     <h3>🤖 Android</h3>
     <ol>
-      <li><b>1.</b> Ketuk tombol <b>⋮</b> di Chrome</li>
-      <li><b>2.</b> Pilih <b>Install Aplikasi / Add to Home Screen</b></li>
-      <li><b>3.</b> Ketuk <b>Install</b></li>
+      <li><b>1.</b> Ketuk tombol <b>INSTALL APLIKASI</b> di atas</li>
+      <li><b>2.</b> Kalau tidak muncul, ketuk <b>⋮</b> di Chrome</li>
+      <li><b>3.</b> Pilih <b>Install Aplikasi / Add to Home Screen</b> lalu <b>Install</b></li>
     </ol>
 
     <h3>📱 iPhone</h3>
@@ -66,5 +70,42 @@ h1 span{background:linear-gradient(90deg,#a855f7,#f97316);-webkit-background-cli
 
   <div class="footer">REF GAME © 2026 Supernova Studio</div>
 </div>
+
+<script>
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+// Chrome Android akan kirim event ini kalau PWA bisa di-install
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'flex';
+});
+
+installBtn.addEventListener('click', async () => {
+  if (!deferredPrompt) {
+    // Kalau dibuka di WA / Instagram Browser, tombolnya gak bisa muncul
+    // Arahkan user buka di Chrome
+    alert('Buka link ini di Google Chrome dulu, baru tombol Install akan muncul. Caranya: Ketuk ⋮ > Buka di Chrome / Open in Browser.');
+    return;
+  }
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  installBtn.style.display = 'none';
+});
+
+// Tombol Bagikan
+document.getElementById('shareBtn').addEventListener('click', async () => {
+  const url = 'https://supernovastudioo.github.io/Ref-game/link.html';
+  const text = 'REF GAME - Mainkan. Simpan. Lanjutkan di mana saja.';
+  if (navigator.share) {
+    try { await navigator.share({title:'REF GAME', text:text, url:url}); } catch(e){}
+  } else {
+    navigator.clipboard.writeText(url);
+    alert('Link sudah disalin! Tinggal paste ke WA / TikTok.');
+  }
+});
+</script>
 </body>
 </html>
