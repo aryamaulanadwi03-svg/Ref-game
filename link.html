@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REF GAME - Gas Main Sekarang! 🔥</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#a855f7">
+<meta name="description" content="Main REF GAME sekarang! Login Google, data aman, progress ke-save. Gratis!">
+<meta property="og:title" content="REF GAME - Gas Main Sekarang! 🔥">
+<meta property="og:description" content="Udah bisa Login Google! Data aman, progress ke-save. Klik buat main sekarang, gratis!">
+<meta property="og:image" content="https://supernovastudioo.github.io/Ref-game/icon-512.png">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
   body{background:#0a0a0a;color:white;text-align:center;padding:24px 16px 40px}
@@ -11,8 +17,9 @@
   h1{font-size:32px;margin:14px 0 4px;letter-spacing:1px}
   .verified{color:#38bdf8;font-size:14px;font-weight:700}
   p.desc{color:#a1a1aa;font-size:15px;line-height:1.5;margin:12px auto 20px;max-width:360px}
-  .btn{display:block;background:#a855f7;color:white;text-decoration:none;font-weight:800;font-size:18px;padding:16px;border-radius:16px;margin:10px auto;max-width:360px;box-shadow:0 8px 20px rgba(168,85,247,.4)}
+  .btn{display:block;background:#a855f7;color:white;text-decoration:none;font-weight:800;font-size:18px;padding:16px;border-radius:16px;margin:10px auto;max-width:360px;box-shadow:0 8px 20px rgba(168,85,247,.4);border:none;width:100%;cursor:pointer}
   .btn2{background:white;color:black;box-shadow:none}
+  .btn3{background:#25D366}
   .card{background:#18181b;border:1px solid #27272a;border-radius:18px;padding:18px;text-align:left;max-width:360px;margin:16px auto}
   .card h3{font-size:16px;margin-bottom:12px}
   .step{display:flex;gap:12px;margin-bottom:14px}
@@ -24,42 +31,71 @@
 </style>
 </head>
 <body>
-
 <img src="https://supernovastudioo.github.io/Ref-game/icon-512.png" class="logo">
 <h1>REF GAME</h1>
 <div class="verified">✓ OFFICIAL GAME • BY SUPERNOVA STUDIO</div>
 <p class="desc">Main bareng, gaspol! Udah bisa Login Google, data aman, progress ke-save otomatis. Gratis, tanpa download ribet.</p>
-
 <div>
   <span class="badge">🔥 100% GRATIS</span>
   <span class="badge">👤 LOGIN GOOGLE</span>
   <span class="badge">💾 DATA AMAN</span>
 </div>
 
-<!-- TOMBOL UTAMA -->
 <a class="btn" href="https://supernovastudioo.github.io/Ref-game/">▶ GAS MAIN SEKARANG</a>
-<a class="btn btn2" href="https://supernovastudioo.github.io/Ref-game/">⬇ INSTALL JADI APLIKASI</a>
+<button id="installBtn" class="btn btn2">⬇ INSTALL JADI APLIKASI</button>
+<p id="installNote" style="font-size:13px;color:#a1a1aa;margin-top:6px;">Pencet tombol di atas, langsung muncul popup Install kayak Play Store</p>
 
-<!-- CARA INSTALL -->
 <div class="card">
   <h3>📱 CARA INSTALL BIAR FULLSCREEN (30 DETIK)</h3>
-  <div class="step"><div class="num">1</div><div><b>Buka Game-nya</b><span>Pencet tombol ungu "GAS MAIN SEKARANG" di atas.</span></div></div>
-  <div class="step"><div class="num">2</div><div><b>Login Google</b><span>Pake akun Google lu, biar data ke-save & nggak ilang.</span></div></div>
-  <div class="step"><div class="num">3</div><div><b>Android: Titik 3 > Add to Home Screen</b><span>iPhone: Tombol Share > Add to Home Screen.</span></div></div>
-  <div class="step"><div class="num">4</div><div><b>Buka dari Home Screen</b><span>Game kebuka fullscreen, kayak aplikasi Play Store beneran!</span></div></div>
-</div>
-
-<!-- CARA MAIN -->
-<div class="card">
-  <h3>🎮 CARA MAIN</h3>
-  <div class="step"><div class="num">1</div><div><b>Login dulu</b><span>Biar level & item lu ke-save.</span></div></div>
-  <div class="step"><div class="num">2</div><div><b>Main & Kumpulin Poin</b><span>Makin sering main, makin gokil.</span></div></div>
-  <div class="step"><div class="num">3</div><div><b>Logout? Data Balik Lagi</b><span>Login lagi pake akun yang sama, data lu balik semua.</span></div></div>
+  <div class="step"><div class="num">1</div><div><b>Pencet INSTALL JADI APLIKASI</b><span>Nanti muncul popup "Install aplikasi?" pencet Install.</span></div></div>
+  <div class="step"><div class="num">2</div><div><b>Buka dari Home Screen</b><span>Game kebuka fullscreen, kayak aplikasi Play Store beneran!</span></div></div>
+  <div class="step"><div class="num">3</div><div><b>Login Google</b><span>Pake akun Google lu, biar data ke-save & nggak ilang.</span></div></div>
 </div>
 
 <a class="btn" href="https://supernovastudioo.github.io/Ref-game/">▶ MAIN SEKARANG - GRATIS</a>
-
+<a class="btn btn3" href="https://wa.me/?text=Bro%20cobain%20game%20gua%20REF%20GAME%20nih%20🔥%20Udah%20bisa%20login%20Google!%20https%3A%2F%2Fsupernovastudioo.github.io%2FRef-game%2Flink.html">💬 SHARE KE WA TEMEN LU</a>
 <p class="footer">© 2026 SUPERNOVA STUDIO • REF GAME<br> Ada bug? Screenshot & kirim ke pembuat game ini.</p>
 
+<script>
+let deferredPrompt = null;
+const installBtn = document.getElementById('installBtn');
+const installNote = document.getElementById('installNote');
+
+// Tangkap sinyal install dari Chrome
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installNote.textContent = "✅ Siap! Pencet tombol di atas buat Install.";
+  installNote.style.color = "#4ade80";
+});
+
+// Pas tombol di link.html dipencet, langsung munculin popup
+installBtn.addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      installNote.textContent = "🎉 Berhasil! Cek Home Screen lu, game udah ke-install!";
+      installBtn.textContent = "✅ UDAH KE-INSTALL - BUKA GAME";
+      installBtn.onclick = () => { window.location.href = "https://supernovastudioo.github.io/Ref-game/"; };
+    }
+    deferredPrompt = null;
+  } else {
+    // Kalo Chrome belum siap kasih popup (misal udah ke-install), lempar ke game aja
+    // Di dalem game ada tombol "Pasang aplikasi" juga
+    alert("Kalo popup belum muncul, coba:\n1. Hapus installan lama dulu\n2. Buka game-nya, terus pencet tombol 'Pasang aplikasi' di dalem game.");
+    window.location.href = "https://supernovastudioo.github.io/Ref-game/";
+  }
+});
+
+window.addEventListener('appinstalled', () => {
+  installBtn.textContent = "✅ UDAH KE-INSTALL - BUKA GAME";
+});
+
+// Daftarin SW biar link.html juga dianggap aplikasi
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
 </body>
 </html>
