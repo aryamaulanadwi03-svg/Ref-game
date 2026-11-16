@@ -1,8 +1,8 @@
 [{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "io.github.aryamaulanadwi03_svg.twa",
-    "sha256_cert_fingerprints": ["63:D7:F5:F3:91:4E:DC:E7:AB:2F:FC:6E:87:07:7D:71:D9:E3:C4:E6:AB:DF:DA:C1:46:D4:10:AA:A4:89:A0:8A"]
-  }
-}]
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.supernovastudioo.twa",
+        "sha256_cert_fingerprints": ["CC:76:35:D7:BA:C7:40:DA:28:6D:AB:A5:D4:05:16:D2:0C:CE:57:D9:D7:54:D9:86:16:DF:C9:FF:07:87:DC:EA"]
+      }
+    }]
