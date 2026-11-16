@@ -155,17 +155,45 @@ svg *{transform-box:fill-box;transform-origin:center}
 .pdk .btn{padding:9px 12px;font-size:18px}.pdk .on{border-color:var(--gd);background:var(--sf)}
 #cs *{transform-box:view-box;transform-origin:0 0}
 .pit{touch-action:none;padding:8px 10px!important;font-size:14px!important;text-align:center;line-height:1.3}
+#gl{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
+.gt{padding:12px 6px 10px!important;border-radius:20px!important;box-shadow:0 2px 10px #0000001a;transition:transform .12s}.gt:active{transform:scale(.96)}.gt b{font-size:14px!important}
+.gt .lg{width:76px;height:76px;border-radius:22px;padding:8px;box-shadow:inset 0 -3px 0 #0003,0 3px 8px #0003}
+.gt .lf{border:0;color:#fff;width:100%;height:100%}.gt .q{top:4px;right:4px;width:22px;height:22px}
+#bn{width:min(100%,420px);display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bnr{border:0;border-radius:18px;padding:16px 10px;color:#fff;font:inherit;font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;box-shadow:0 4px 12px #0003;text-shadow:0 1px 2px #0004}.bnr span{font-size:26px}.bnr:active{transform:scale(.97)}
+#qa{width:min(100%,420px);display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.qi{background:none;border:0;font:inherit;color:var(--mu);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer}.qi i{font-style:normal;width:50px;height:50px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:inset 0 -3px 0 #0003,0 3px 8px #0003}.qi:active i{transform:scale(.94)}
+.sec{width:min(100%,420px);font-size:24px}
+.qi i{position:relative}.bdg{position:absolute;top:-4px;right:-4px;min-width:16px;height:16px;border-radius:8px;background:#ff3b4e;color:#fff;font:700 10px/16px Manrope,sans-serif;font-style:normal;text-align:center;padding:0 4px;border:2px solid var(--bg);box-sizing:content-box}.bdg:empty{min-width:8px;width:8px;height:8px;padding:0}
+.top{gap:10px}#lbh{font-size:30px!important}
+#tabs{width:min(100%,420px);flex-direction:column;gap:10px}
+.seg{display:flex;background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:4px;gap:4px}.seg .tb{flex:1;border:0;border-radius:12px;padding:10px;font-size:14px}.seg .tb.on{background:var(--gd);color:#1b1608}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.chips::-webkit-scrollbar{display:none}.chips .tb{flex:none;white-space:nowrap;border-radius:999px;padding:8px 16px}.chips .tb.on{background:var(--gd);color:#1b1608;border-color:var(--gd)}
+#ll{gap:10px}.rw{border-radius:18px;padding:10px 14px;box-shadow:0 2px 10px #0000001a}
+.rw b{flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg);color:var(--mu);display:flex;align-items:center;justify-content:center;font-size:14px}
+.rw:nth-child(1) b{background:linear-gradient(135deg,#ffe27a,#f2a81d);color:#4a3000}.rw:nth-child(2) b{background:linear-gradient(135deg,#eef1f6,#aab4c6);color:#2b3342}.rw:nth-child(3) b{background:linear-gradient(135deg,#f3b98a,#c9733a);color:#3f1d05}
+.rw:nth-child(1){border-color:#f2a81d88}.rw em{color:var(--gd);font-size:19px}
+.emp{display:flex;flex-direction:column;align-items:center;gap:8px;padding:48px 20px;color:var(--mu);text-align:center}.emp span{font-size:56px}
+#lbn{margin-top:2px;padding:6px 14px;border-radius:999px;background:var(--sf);border:1px solid var(--ln);font-size:12px}
+#co{pointer-events:none}
+#lbs{overflow-x:hidden}
+#tabs{display:block!important;width:min(100%,420px);max-width:100%;min-width:0;overflow:hidden}
+#tabs .seg{width:100%;margin-bottom:10px}
+#tabs .chips{display:flex;flex-wrap:nowrap;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-x}
+#lbs>*{flex:none}
+.rw{gap:12px}.rw .ra{flex:none;display:flex;overflow:visible}
+.rw .rn{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.rw .rn strong{font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rw .rn small{width:auto;text-align:left;font-size:12px}
+.rw .rs{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:2px}.rw .rs small{width:auto;text-align:right;font-size:11px}
+#ll{width:min(100%,420px)}
 </style>
 </head>
 <body>
 <div id="load"><h1 class="serif">REF</h1><div class="lb"><i></i></div><p id="tip">Menyiapkan papan...</p></div>
 
 <section class="scr" id="menu">
-  <div class="bar2"><div class="pf" id="pf"></div><span class="ibs"><button class="btn ib" id="bl">🏆</button><button class="btn ib" id="bs">⚙️</button></span></div>
+  <div class="bar2"><div class="pf" id="pf"></div><span class="ibs"><button class="btn ib" id="bt"></button><button class="btn ib" id="bl">🏆</button><button class="btn ib" id="bs">⚙️</button></span></div>
   <div class="tr"><h1 class="serif" style="font-size:40px;letter-spacing:.14em;margin:4px 0 0">REF</h1><button class="btn" id="co"></button></div>
-  <div id="gl"></div>
-  <div class="gc" id="pt" style="width:min(100%,420px)"></div>
-  <div id="dm"></div>
+  <div id="qa"></div><b class="serif sec" id="sc1"></b><div id="gl"></div>
   <button class="btn hid" id="ins" style="width:min(100%,420px)">📲 Pasang aplikasi</button>
 </section>
 
@@ -192,6 +220,7 @@ svg *{transform-box:fill-box;transform-origin:center}
 </section>
 <div id="ov" class="hid"></div><div id="t"></div>
 
+<script>window.addEventListener('error',function(e){var d=document.createElement('div');d.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:99;background:#c00;color:#fff;padding:8px;font:12px monospace';d.textContent='ERR: '+e.message+' (baris '+e.lineno+')';document.body.appendChild(d)})</script>
 <script>
 const LANG=()=>D.lang||(/^id/i.test(navigator.language)?'id':'en'),T=(a,b)=>LANG()==='id'?a:b,$=s=>document.querySelector(s),P=[523,587,659,784,880,1047,1175,1319];
 const LG={
@@ -306,27 +335,31 @@ function bump(){const n=new Date(),t=day(n);if(D.st.l===t)return;if(D.st.l===day
 
 /* navigasi */
 const show=id=>['menu','lbs','game','pets'].forEach(x=>$('#'+x).classList.toggle('hid',x!==id));
+const PAL=['linear-gradient(135deg,#7f9bff,#4a5fe0)','linear-gradient(135deg,#ff9a8b,#ff5d6c)','linear-gradient(135deg,#5ee7b0,#18a878)','linear-gradient(135deg,#ffd35c,#ff9419)','linear-gradient(135deg,#c58bff,#7a45e0)','linear-gradient(135deg,#5cd4ff,#1f8fe0)'];
 function menu(){
   playing=false;dch=null;Math.random=_MR;run++;show('menu');close();applyTh();$('#co').textContent='💰 '+D.co;
   const L=lvl(),n=D.name||'Pemain';
   $('#pf').innerHTML=`${av(44,D.fr,D.ai)}<span class="tx"><b>${esc(n)}</b><small>Lv ${L.l}${stk()?' · 🔥'+D.st.n:''}</small><i class="pb"><u style="width:${L.x/L.n*100}%"></u></i></span>${badge(L.l,26)}`;
   $('#pf').onclick=profile;
   $('#gl').innerHTML=GAMES.map(g=>{const b=best(g.k),gl=GOALS[g.k]||[],m=gl.filter(x=>b>=x).length;
-    return `<div class="gt" data-k="${g.k}"><button class="q" data-q="${g.k}">?</button><span class="lg">${g.i||'<span class="lf">'+esc(g.n[0])+'</span>'}</span><b>${g.n}</b><span class="mt">${'◆'.repeat(m)}${'◇'.repeat(Math.max(0,gl.length-m))}</span><small>${T('Terbaik','Best')} ${b}</small></div>`}).join('')+(GAMES.length%2?'<div class="gt soon"><span class="lg"><span class="lf">?</span></span><b>'+T('Segera','Soon')+'</b><small>'+T('Game baru','New game')+'</small></div>':'');
+    return `<div class="gt" data-k="${g.k}"><button class="q" data-q="${g.k}">?</button><span class="lg" style="background:${PAL[g.k.charCodeAt(0)%PAL.length]}">${g.i||'<span class="lf">'+esc(g.n[0])+'</span>'}</span><b>${g.n}</b><span class="mt">${'◆'.repeat(m)}${'◇'.repeat(Math.max(0,gl.length-m))}</span><small>${T('Terbaik','Best')} ${b}</small></div>`}).join('')+(((3-GAMES.length%3)%3)?('<div class="gt soon"><span class="lg"><span class="lf">?</span></span><b>'+T('Segera','Soon')+'</b><small>'+T('Game baru','New game')+'</small></div>').repeat((3-GAMES.length%3)%3):'');
   document.querySelectorAll('.gt').forEach(e=>e.onclick=()=>e.dataset.k&&play(e.dataset.k));
   document.querySelectorAll('.q').forEach(e=>e.onclick=ev=>{ev.stopPropagation();tut(e.dataset.q,close)});
-  mrender();ptCard();
+  $('#sc1').textContent=T('Wajib main','Must play');
+  const DD=day(new Date()),DG=GAMES[hs(DD+'c')%GAMES.length],DR=D.dc&&D.dc.d===DD?D.dc:null,mm=dm(),mc=mis().filter((x,i)=>x.v>=1&&!mm.cl.includes(i)).length;
+  $('#qa').innerHTML=[['📋',T('Misi','Missions'),'#5b6cff,#3b46d9',mc?String(mc):''],['🛍️',T('Toko','Shop'),'#ff9a3d,#f26a1b',''],['🎯',T('Tantangan','Challenge'),'#2fd49a,#12a56e',DR?'':'.'],['🎁',T('Hadiah','Gift'),'#ffc23d,#ff9419',D.ch===DD?'':'.']].map((x,i)=>`<button class="qi" data-i="${i}"><i style="background:linear-gradient(135deg,${x[2]})">${x[0]}${x[3]?`<em class="bdg">${x[3]==='.'?'':x[3]}</em>`:''}</i>${x[1]}</button>`).join('');
+  $('#bt').textContent=D.lm?'🌙':'☀️';$('#bt').onclick=()=>{D.lm=D.lm?0:1;save();menu()};
+  document.querySelectorAll('.qi').forEach(e=>e.onclick=()=>{const i=+e.dataset.i;if(i===0)mopen();else if(i===1)shop();else if(i===2)play(DG.k,{d:DD});else chest()});
 }
 const hs=t=>[...t].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7);
 function dm(){const d=day(new Date());if(!D.dm||D.dm.d!==d)D.dm={d,p:0,ks:{},sc:{},cl:[]};return D.dm}
 function mis(){const m=dm(),g=GAMES[hs(m.d)%GAMES.length],x=(GOALS[g.k]||[100])[0],n=Math.min(2,GAMES.length),u=Object.keys(m.ks).length,c=m.sc[g.k]||0;
   return[{t:T('Main 3 kali','Play 3 times'),v:Math.min(1,m.p/3),r:30,x:m.p+'/3'},{t:T('Main '+n+' game berbeda','Play '+n+' different games'),v:Math.min(1,u/n),r:30,x:u+'/'+n},{t:T('Skor '+x+' di '+g.n,'Score '+x+' in '+g.n),v:Math.min(1,c/x),r:50,x:c+'/'+x}]}
 const mdn=()=>mis().filter(a=>a.v>=1).length;
-function mrender(){
+function mopen(){
   const m=dm(),ms=mis();
-  $('#dm').innerHTML=dcard()+'<b class="serif" style="font-size:22px">'+T('Misi harian','Daily missions')+'</b>'+ms.map((a,i)=>`<div class="ms"><span class="tx"><b>${a.t}</b><i class="pb"><u style="width:${a.v*100}%"></u></i></span><small>${a.x}</small>${m.cl.includes(i)?'<span class="cd">✓</span>':a.v>=1?`<button class="btn pri cl2" data-i="${i}">+${a.r} XP</button>`:`<span class="rw3">+${a.r} XP</span>`}</div>`).join('');
-  {const d=day(new Date());$('#dc').onclick=()=>play(GAMES[hs(d+'c')%GAMES.length].k,{d});$('#ck').onclick=chest}
-  document.querySelectorAll('.cl2').forEach(e=>e.onclick=()=>{const i=+e.dataset.i,b4=lvl().l;m.cl.push(i);D.xp+=ms[i].r;D.co+=ms[i].r/2|0;D.mc++;save();beep(880,.15);toast('+'+ms[i].r+' XP'+(lvl().l>b4?' · Level '+lvl().l+'!':''));acCheck(1);menu()});
+  pop('<h2 class="serif" style="font-size:30px">'+T('Misi harian','Daily missions')+'</h2>'+ms.map((a,i)=>`<div class="ms" style="width:100%"><span class="tx"><b>${a.t}</b><i class="pb"><u style="width:${a.v*100}%"></u></i></span><small>${a.x}</small>${m.cl.includes(i)?'<span class="cd">✓</span>':a.v>=1?`<button class="btn pri cl2" data-i="${i}" style="width:auto">+${a.r} XP</button>`:`<span class="rw3">+${a.r} XP</span>`}</div>`).join('')+dcard(),()=>{close();menu()});
+  document.querySelectorAll('.cl2').forEach(e=>e.onclick=()=>{const i=+e.dataset.i,b4=lvl().l;m.cl.push(i);D.xp+=ms[i].r;D.co+=ms[i].r/2|0;D.mc++;save();beep(880,.15);toast('+'+ms[i].r+' XP'+(lvl().l>b4?' · Level '+lvl().l+'!':''));acCheck(1);mopen()});
 }
 function quit(){if(!playing)return menu();if(paused)return;paused=true;pop(`<h2 class="serif" style="font-size:28px">${T('Keluar?','Quit?')}</h2><p>${T('Skor game ini tidak akan tersimpan.','This game\u2019s score will not be saved.')}</p><button class="btn pri" id="rs">${T('Lanjut main','Keep playing')}</button><button class="btn" id="qt" style="color:#e0556b">${T('Keluar','Quit')}</button>`);$('#rs').onclick=()=>{paused=false;close()};$('#qt').onclick=()=>{paused=false;menu()}}
 const wk=()=>GAMES[hs('w'+Math.floor(Date.now()/6048e5))%GAMES.length];
@@ -336,7 +369,7 @@ function chest(){const d=day(new Date());if(D.ch===d)return toast(T('Sudah dibuk
     if(r<4&&fr.length){th=fr[Math.random()*fr.length|0];tx=T('Tema ','Theme ')+N(TH[th].n)+'!'}else{co=r<30?20:r<60?40:r<85?80:150;tx='+'+co+' 💰'}
     D.ch=d;D.co+=co;if(th>=0){D.own.push(th);D.th=th}save();acCheck(1);
     pop(`<div style="font-size:64px">🎉</div><h2 class="serif" style="font-size:40px">${tx}</h2><button class="btn pri" id="ok">${T('Ambil','Claim')}</button>`);beep(1047,.3);vib(30);$('#ok').onclick=()=>{close();menu()}},1100)}
-function dcard(){const d=day(new Date()),g=GAMES[hs(d+'c')%GAMES.length],r=D.dc&&D.dc.d===d?D.dc:null;return `<div class="gc" id="dc" style="width:100%"><span class="ic">🎯</span><span class="tx"><b>${T('Tantangan harian','Daily challenge')}</b><small>${g.n} · ${r?T('skormu ','your score ')+r.s:T('+30 💰 pertama kali','+30 💰 first time')}</small></span><span class="sr">${T('Main','Play')}</span></div><div class="gc" id="ck" style="width:100%"><span class="ic">🎁</span><span class="tx"><b>${T('Peti harian','Daily chest')}</b><small>${D.ch===d?T('Sudah dibuka','Opened'):T('Buka gratis hari ini','Open free today')}</small></span><span class="sr">${D.ch===d?'✓':T('Buka','Open')}</span></div><small class="sub">⭐ ${T('Event minggu ini','Weekly event')}: ${wk().n} (XP x2)</small>`}
+function dcard(){return `<small class="sub">⭐ ${T('Event minggu ini','Weekly event')}: ${wk().n} (XP x2)</small>`}
 function pz(){if(paused)return;paused=true;pop(`<h2 class="serif" style="font-size:30px">${T('Jeda','Paused')}</h2><button class="btn pri" id="rs">${T('Lanjut','Resume')}</button><button class="btn" id="qt">${T('Keluar ke menu','Quit to menu')}</button>`);$('#rs').onclick=()=>{paused=false;close()};$('#qt').onclick=()=>{paused=false;menu()}}
 const TH=[
 {n:'Malam',p:0,v:['#0d1220','#161d31','#2b3555','#d8b873','#1f2a4d']},
@@ -346,7 +379,7 @@ const TH=[
 {n:'Sakura',p:500,v:['#1c0f18','#2c1826','#523349','#ff9ec4','#3d1f36']},
 {n:'Neon',p:700,v:['#07070f','#10111f','#2a2d5a','#3dffd0','#1a1450']},
 {n:'Emas',p:1000,v:['#14110a','#231d10','#4a3d1c','#ffd24a','#3a2d0e']}];
-const applyTh=()=>{const v=TH[D.th]?TH[D.th].v:TH[0].v;['--bg','--sf','--ln','--gd','--hl'].forEach((k,i)=>document.documentElement.style.setProperty(k,v[i]))};
+const applyTh=()=>{const v=TH[D.th]?TH[D.th].v:TH[0].v,L=D.lm,o=L?['#f2f5fb','#ffffff','#dde3f0','#c98a12','#d9e6ff']:v,r=document.documentElement.style;['--bg','--sf','--ln','--gd','--hl'].forEach((k,n)=>r.setProperty(k,o[n]));r.setProperty('--tx',L?'#1b2236':'#ece8e0');r.setProperty('--mu',L?'#6a7490':'#8d95ad');const m=document.querySelector('meta[name=theme-color]');if(m)m.content=o[0]};
 const AC=[
 {id:'a1',n:'Langkah pertama',d:'Selesaikan 1 game',r:20,f:()=>D.pl>=1},
 {id:'a2',n:'Penjelajah',d:'Coba semua game',r:60,f:()=>GAMES.every(g=>D.b[g.k]>0)},
@@ -370,12 +403,10 @@ function loginBonus(){
   beep(880,.2);$('#ok').onclick=()=>{close();menu()};
 }
 function settings(){
-  pop(`<h2 class="serif" style="font-size:30px">${T('Pengaturan','Settings')}</h2><div class="sl2"><span>${T('Efek suara','Sound effects')}</span><button class="tg${sound?' on':''}" data-t="snd"></button></div><div class="sl2"><span>${T('Getar','Vibration')}</span><button class="tg${D.vib!==0?' on':''}" data-t="vib"></button></div><div class="sl2"><span>${T('Sensitivitas geser','Swipe sensitivity')}</span><button class="btn tb" style="width:auto" id="s0">${T(SW[D.swi][1],['High','Normal','Low'][D.swi])}</button></div><div class="sl2"><span>Language / Bahasa</span><button class="btn tb" style="width:auto" id="sg">${LANG().toUpperCase()}</button></div><button class="btn" id="s1">${T('Ubah nama','Change name')}</button><button class="btn" id="s2">${T('Tampilkan tutorial lagi','Show tutorials again')}</button><button class="btn" id="sc">${cloud.u?'☁ '+esc(cloud.u.displayName||cloud.u.email||T('Akun','Account'))+' · '+T('Kelola','Manage'):'☁ '+T('Hubungkan akun Google','Connect Google account')}</button><button class="btn" id="se">${T('Ekspor progres (salin kode)','Export progress (copy code)')}</button><button class="btn" id="si">${T('Impor progres','Import progress')}</button><button class="btn" id="s3" style="color:#e0556b">${T('Reset semua data','Reset all data')}</button><small class="sub">REF v13</small>`,close);
+  pop(`<h2 class="serif" style="font-size:30px">${T('Pengaturan','Settings')}</h2><div class="sl2"><span>${T('Efek suara','Sound effects')}</span><button class="tg${sound?' on':''}" data-t="snd"></button></div><div class="sl2"><span>${T('Getar','Vibration')}</span><button class="tg${D.vib!==0?' on':''}" data-t="vib"></button></div><div class="sl2"><span>${T('Sensitivitas geser','Swipe sensitivity')}</span><button class="btn tb" style="width:auto" id="s0">${T(SW[D.swi][1],['High','Normal','Low'][D.swi])}</button></div><div class="sl2"><span>Language / Bahasa</span><button class="btn tb" style="width:auto" id="sg">${LANG().toUpperCase()}</button></div><button class="btn" id="s1">${T('Ubah nama','Change name')}</button><button class="btn" id="s2">${T('Tampilkan tutorial lagi','Show tutorials again')}</button><button class="btn" id="sc">${cloud.u?'☁ '+esc(cloud.u.displayName||cloud.u.email||T('Akun','Account'))+' · '+T('Kelola','Manage'):'☁ '+T('Hubungkan akun Google','Connect Google account')}</button><button class="btn" id="s3" style="color:#e0556b">${T('Reset semua data','Reset all data')}</button><small class="sub">REF v13</small>`,close);
   document.querySelectorAll('.tg').forEach(e=>e.onclick=()=>{const t=e.dataset.t;if(t==='snd'){sound=!sound;D.snd=+sound}else{D.vib=D.vib===0?1:0;vib(30)}save();e.classList.toggle('on',t==='snd'?sound:D.vib!==0)});
   $('#s0').onclick=e=>{D.swi=(D.swi+1)%3;save();e.target.textContent=T(SW[D.swi][1],['High','Normal','Low'][D.swi])};
   $('#sc').onclick=account;
-  $('#se').onclick=async()=>{const c=btoa(unescape(encodeURIComponent(JSON.stringify(D))));try{await navigator.clipboard.writeText(c);toast(T('Kode disalin','Code copied'))}catch(e){prompt(T('Salin kode ini:','Copy this code:'),c)}};
-  $('#si').onclick=()=>{const c=prompt(T('Tempel kode simpan:','Paste save code:'));if(!c)return;try{const d=JSON.parse(decodeURIComponent(escape(atob(c.trim()))));if(!d||typeof d!=='object'||!d.b)throw 0;localStorage.setItem('ref5',JSON.stringify(d));location.reload()}catch(e){toast(T('Kode tidak valid','Invalid code'))}};
   $('#s1').onclick=askName;$('#sg').onclick=()=>{D.lang=LANG()==='id'?'en':'id';save();menu();settings()};
   $('#s2').onclick=()=>{D.seen={};save();toast(T('Tutorial muncul lagi','Tutorials will show again'))};
   $('#s3').onclick=()=>{pop(`<h2 class="serif" style="font-size:28px">${T('Yakin?','Are you sure?')}</h2><p>${T('Skor, XP, level, dan bingkai akan terhapus dan tidak bisa dikembalikan.','Scores, XP, levels and frames will be erased and cannot be recovered.')}</p><button class="btn" id="yy" style="color:#e0556b">${T('Ya, hapus','Yes, erase')}</button><button class="btn pri" id="nn">${T('Batal','Cancel')}</button>`);
@@ -396,7 +427,7 @@ function welcome(){
   $('#wg').onclick=()=>googleLogin(async()=>{toast(T('Menyiapkan akun...','Setting up account...'));for(let i=0;i<60&&!cloud.sd;i++)await nap(100);D.mode='google';save();D.name?loginBonus():askName()});
 }
 function account(){
-  if(!FBC){pop(`<h2 class="serif" style="font-size:28px">${T('Akun belum aktif','Account not active')}</h2><p>${T('Fitur akun Google belum dihubungkan. Progresmu tetap tersimpan di perangkat ini. Untuk pindah HP, pakai Ekspor progres di Pengaturan.','Google account is not connected yet. Your progress stays on this device. To move phones, use Export progress in Settings.')}</p><button class="btn pri" id="ok">${T('Mengerti','Got it')}</button>`);$('#ok').onclick=settings;return}
+  if(!FBC){pop(`<h2 class="serif" style="font-size:28px">${T('Akun belum aktif','Account not active')}</h2><p>${T('Fitur akun Google belum dihubungkan. Progresmu tetap tersimpan di perangkat ini.','Google account is not connected yet. Your progress stays on this device.')}</p><button class="btn pri" id="ok">${T('Mengerti','Got it')}</button>`);$('#ok').onclick=settings;return}
   if(cloud.u){
     pop(`<h2 class="serif" style="font-size:28px">Akun Google</h2><p>${esc(cloud.u.displayName||cloud.u.email||T('Tersambung','Connected'))}</p><p>${T('Progresmu tersimpan otomatis ke akun ini.','Your progress is saved automatically to this account.')}</p><button class="btn pri" id="sy">${T('Sinkronkan sekarang','Sync now')}</button><button class="btn" id="so" style="color:#e0556b">${T('Keluar','Sign out')}</button>`,settings);
     $('#sy').onclick=()=>cloudSync();
@@ -548,22 +579,22 @@ function finish(k,s){
 }
 function lboard(k){
   lboardL(k);if(!lbg)return;
-  const t=++lbt,L=$('#ll'),m=x=>`<p class="sub" style="padding:24px">${x}</p>`;
+  const t=++lbt,L=$('#ll'),m=x=>`<div class="emp"><span>🌐</span>${x}</div>`;
   if(!navigator.onLine){L.innerHTML=m(T('Tidak ada internet. Papan global butuh koneksi.','No internet. The global board needs a connection.'));return}
   if(!cloud.db){L.innerHTML=m(T('Papan global belum aktif','Global board is not active'));return}
   L.innerHTML=m(T('Memuat...','Loading...'));
-  cloud.db.collection('lb_'+k).orderBy('s','desc').limit(20).get().then(q=>{if(t!==lbt)return;L.innerHTML=q.empty?m(T('Belum ada skor global','No global scores yet')):q.docs.map((d,i)=>{const e=d.data();return `<div class="rw"><b>${i+1}</b><span style="display:flex;align-items:center;gap:8px">${av(36,e.f|0,e.a|0)}<span>${esc(e.n)}<small style="width:auto;margin-left:8px;text-align:left">Lv ${e.v||1}</small></span></span><em>${e.s}</em></div>`}).join('')}).catch(()=>{if(t===lbt)L.innerHTML=m(T('Gagal memuat','Failed to load'))})
+  cloud.db.collection('lb_'+k).orderBy('s','desc').limit(20).get().then(q=>{if(t!==lbt)return;L.innerHTML=q.empty?m(T('Belum ada skor global','No global scores yet')):q.docs.map((d,i)=>{const e=d.data();return `<div class="rw"><b>${i+1}</b><span class="ra">${av(40,e.f|0,e.a|0)}</span><div class="rn"><strong>${esc(e.n)}</strong><small>Lv ${e.v||1}</small></div><div class="rs"><em>${e.s}</em></div></div>`}).join('')}).catch(()=>{if(t===lbt)L.innerHTML=m(T('Gagal memuat','Failed to load'))})
 }
 function lboardL(k){
   run++;close();show('lbs');
   $('#lbh').textContent=T('Papan Skor','Leaderboard');$('#lbn').textContent=lbg?T('Skor global dari semua pemain','Global scores from all players'):T('Skor tersimpan di perangkat ini','Scores are saved on this device');
-  $('#tabs').innerHTML=GAMES.map(g=>`<button class="btn tb ${g.k===k?'on':''}" data-k="${g.k}">${g.n}</button>`).join('')+'<button class="btn tb'+(lbg?' on':'')+'" id="lg">🌐 Global</button>';
-  document.querySelectorAll('#tabs .tb').forEach(e=>e.onclick=()=>{if(e.id==='lg')lbg=lbg?0:1;lboard(e.dataset.k||k)});
+  $('#tabs').innerHTML='<div class="seg"><button class="btn tb'+(lbg?'':' on')+'" id="lp">📱 '+T('Perangkat','Device')+'</button><button class="btn tb'+(lbg?' on':'')+'" id="lg">🌐 Global</button></div><div class="chips">'+GAMES.map(g=>`<button class="btn tb ${g.k===k?'on':''}" data-k="${g.k}">${g.n}</button>`).join('')+'</div>';
+  document.querySelectorAll('#tabs .tb').forEach(e=>e.onclick=()=>{if(e.id==='lg')lbg=1;else if(e.id==='lp')lbg=0;lboard(e.dataset.k||k)});{const o=document.querySelector('.chips .on');if(o)o.scrollIntoView({inline:'center',block:'nearest'})}
   const a=D.lb[k];
-  $('#ll').innerHTML=a.length?a.map((e,i)=>`<div class="rw"><b>${i+1}</b><span style="display:flex;align-items:center;gap:8px">${av(36,e.f|0,e.a|0)}<span>${esc(e.n)}<small style="width:auto;margin-left:8px;text-align:left">Lv ${e.v||1}</small></span></span><em>${e.s}</em><small>${new Date(e.t).toLocaleDateString(LANG()==='id'?'id-ID':'en-US',{day:'numeric',month:'short'})}</small></div>`).join(''):'<p class="sub" style="padding:24px">'+T('Belum ada skor. Mainkan dulu!','No scores yet. Play first!')+'</p>';
+  $('#ll').innerHTML=a.length?a.map((e,i)=>`<div class="rw"><b>${i+1}</b><span class="ra">${av(40,e.f|0,e.a|0)}</span><div class="rn"><strong>${esc(e.n)}</strong><small>Lv ${e.v||1}</small></div><div class="rs"><em>${e.s}</em><small>${new Date(e.t).toLocaleDateString(LANG()==='id'?'id-ID':'en-US',{day:'numeric',month:'short'})}</small></div></div>`).join(''):'<div class="emp"><span>🏆</span>'+T('Belum ada skor. Mainkan dulu!','No scores yet. Play first!')+'</div>';
 }
 $('#bk').onclick=quit;$('#b3').onclick=menu;$('#bl').onclick=()=>lboard('g');
-$('#bs').onclick=settings;$('#co').onclick=shop;$('#pz').onclick=pz;
+$('#bs').onclick=settings;$('#pz').onclick=pz;
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&'sdhiwc'.includes(curK)&&!$('#game').classList.contains('hid')&&$('#ov').classList.contains('hid'))pz()});
 function mkCv(W,H,cap=2){$('#ga').innerHTML='<canvas class="bd"></canvas>';const cv=$('#ga').firstChild,d=Math.min(devicePixelRatio||1,cap),x=cv.getContext('2d');cv.style.width=W+'px';cv.style.height=H+'px';cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);return[cv,x]}
 
@@ -1142,7 +1173,7 @@ if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){
 /* loading */
 const tips=[T('Menyiapkan papan...','Setting up the board...'),T('Menyusun tantangan...','Preparing challenges...'),T('Hampir siap...','Almost ready...')];let ti=0;
 const tt=setInterval(()=>{$('#tip').textContent=tips[++ti%tips.length]},650);
-setTimeout(()=>{clearInterval(tt);menu();const L=$('#load');L.style.opacity=0;setTimeout(()=>L.remove(),600);if(!D.mode&&D.name){D.mode='guest';save()}if(!D.mode)welcome();else if(!D.name)askName();else loginBonus();const m=/#c=(\w)\.([\d-]+)\.(\d+)/.exec(location.hash);if(m&&GAMES.some(g=>g.k===m[1])){try{history.replaceState(null,'',location.pathname)}catch(e){}play(m[1],{d:m[2],t:+m[3]})}},3000);
+setTimeout(()=>{clearInterval(tt);try{menu()}catch(e){document.body.insertAdjacentHTML('beforeend','<div style="position:fixed;top:0;left:0;right:0;z-index:99;background:#c00;color:#fff;padding:8px;font:12px monospace">ERR menu: '+e.message+'</div>')}const L=$('#load');L.style.opacity=0;setTimeout(()=>L.remove(),600);if(!D.mode&&D.name){D.mode='guest';save()}if(!D.mode)welcome();else if(!D.name)askName();else loginBonus();const m=/#c=(\w)\.([\d-]+)\.(\d+)/.exec(location.hash);if(m&&GAMES.some(g=>g.k===m[1])){try{history.replaceState(null,'',location.pathname)}catch(e){}play(m[1],{d:m[2],t:+m[3]})}},3000);
 </script>
 </body>
 </html>
