@@ -3,30 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>REF GAME - Main Bareng, Gaspol! 🔥</title>
+<title>REF GAME — by Supernova Studio</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0a0a0a">
-<meta name="description" content="REF GAME - Game gratis dari Supernova Studio. Login Google, data aman, progress ke-save. Install 1 klik jadi aplikasi!">
-<meta property="og:title" content="REF GAME 🔥 Gas Main Sekarang!">
-<meta property="og:description" content="Gratis! Login Google, data aman, progress ke-save. Install jadi aplikasi, main fullscreen!">
+<meta name="description" content="REF GAME by Supernova Studio. Play instantly in your browser.">
+<meta property="og:title" content="REF GAME — by Supernova Studio">
+<meta property="og:description" content="Play instantly. Your progress follows you.">
 <meta property="og:image" content="https://supernovastudioo.github.io/Ref-game/icon-512.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-  body{background:#0a0a0a;color:#fff;min-height:100vh;background-image:radial-gradient(circle at 50% -10%, #a855f7 0%, transparent 45%), radial-gradient(circle at 90% 90%, #f59e0b 0%, transparent 30%);padding:28px 16px 32px}
+  body{background:#0a0a0a;color:#fff;min-height:100vh;background-image:radial-gradient(circle at 50% -10%, #a855f7 0%, transparent 45%);padding:34px 16px 32px}
   .wrap{max-width:400px;margin:0 auto;text-align:center}
   .logo{width:112px;height:112px;border-radius:30px;object-fit:cover;border:3px solid #a855f7;box-shadow:0 0 0 4px #0a0a0a, 0 0 35px #a855f7, 0 20px 40px rgba(0,0,0,.5)}
-  .pill{display:inline-flex;align-items:center;gap:6px;background:#1c1c1e;border:1px solid #2c2c2e;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;margin-top:16px;color:#d4d4d8}
-  .dot{width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 10px #22c55e}
-  h1{font-size:42px;line-height:1;margin:14px 0 6px;letter-spacing:-1px;font-weight:900}
+  .studio{margin-top:18px;font-size:12px;letter-spacing:3px;color:#a1a1aa;font-weight:700}
+  h1{font-size:42px;line-height:1;margin:8px 0 10px;letter-spacing:-1px;font-weight:900}
   h1 span{background:linear-gradient(90deg,#a855f7,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-  .sub{color:#a1a1aa;font-size:15px;line-height:1.55}
-  .sub b{color:#fff}
-  .badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:16px 0 20px}
-  .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:8px 12px;border-radius:999px;font-size:12.5px;font-weight:600}
+  .sub{color:#a1a1aa;font-size:15.5px;line-height:1.55;max-width:320px;margin:0 auto}
   .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px;border-radius:18px;font-size:17px;font-weight:800;border:none;cursor:pointer;text-decoration:none;margin-bottom:12px;transition:.15s}
   .btn:active{transform:scale(.97)}
-  .btn-main{background:#fff;color:#000;box-shadow:0 10px 25px rgba(255,255,255,.18);font-size:18px}
+  .btn-main{background:#fff;color:#000;font-size:18px;margin-top:26px}
   .btn-install{background:linear-gradient(90deg,#a855f7,#7c3aed);color:#fff;box-shadow:0 10px 25px rgba(168,85,247,.45)}
   .btn-wa{background:#25D366;color:#fff}
   .btn-ghost{background:transparent;color:#d4d4d8;border:1px solid #3f3f46}
@@ -43,59 +39,40 @@
   .ios-box{display:none;background:#0ea5e9;color:#fff;border-radius:16px;padding:14px;text-align:left;font-size:13.5px;line-height:1.6;margin-bottom:12px}
   .ios-box b{font-size:15px;display:block;margin-bottom:4px}
   .footer{font-size:11.5px;color:#636366;line-height:1.6;margin-top:18px}
-  .footer a{color:#a1a1aa}
 </style>
 </head>
 <body>
 <div class="wrap">
   <img src="https://supernovastudioo.github.io/Ref-game/icon-512.png" class="logo" alt="REF GAME">
-  <div><span class="pill"><span class="dot"></span> 1.200+ PEMAIN ONLINE • GRATIS</span></div>
+  <div class="studio">SUPERNOVA STUDIO</div>
   <h1>REF <span>GAME</span></h1>
-  <p class="sub">Game paling seru dari <b>Supernova Studio</b>.<br>Main bareng temen, kejar rank, <b>progress lu ke-save otomatis</b> pake Login Google. Nggak bakal ilang!</p>
+  <p class="sub">Mainkan. Simpan. Lanjutkan di mana saja.</p>
 
-  <div class="badges">
-    <span class="badge">🔥 100% GRATIS</span>
-    <span class="badge">👤 LOGIN GOOGLE</span>
-    <span class="badge">💾 DATA AMAN</span>
-  </div>
+  <a class="btn btn-main" href="https://supernovastudioo.github.io/Ref-game/">▶ &nbsp;MAIN SEKARANG</a>
+  <button id="installBtn" class="btn btn-install">⬇ &nbsp;INSTALL APLIKASI</button>
+  <p id="installNote" class="note">Install untuk pengalaman layar penuh.</p>
 
-  <!-- TOMBOL UTAMA: LANGSUNG MAIN -->
-  <a class="btn btn-main" href="https://supernovastudioo.github.io/Ref-game/">▶ &nbsp;GAS MAIN SEKARANG</a>
-  <p class="note">Langsung main di browser, tanpa download. Gratis!</p>
-
-  <!-- TOMBOL INSTALL: ANDROID -->
-  <button id="installBtn" class="btn btn-install">⬇ &nbsp;INSTALL JADI APLIKASI</button>
-  <p id="installNote" class="note">Install biar fullscreen, kayak aplikasi Play Store. Cuma 30 detik!</p>
-
-  <!-- BOX KHUSUS IPHONE - MUNCUL OTOMATIS KLO IPHONE -->
   <div id="iosBox" class="ios-box">
-    <b>📱 Lu pake iPhone? Gini caranya:</b>
-    1. Pencet tombol <b>Share ⤴️</b> di bawah Safari (kotak + panah ke atas)<br>
-    2. Scroll ke bawah, pencet <b>Add to Home Screen</b><br>
-    3. Pencet <b>Add</b> di pojok kanan atas<br>
-    4. Beres! Icon REF nongol di Home Screen lu, tinggal buka!
+    <b>📱 iPhone</b>
+    1. Ketuk tombol <b>Bagikan ⤴️</b> di Safari<br>
+    2. Pilih <b>Add to Home Screen</b><br>
+    3. Ketuk <b>Add</b><br>
+    Selesai. Ikon REF akan muncul di Home Screen.
   </div>
 
-  <div class="card">
-    <h3>🚀 Kenapa Harus Install?</h3>
-    <p>Nggak cuma buka web. Kalo di-install, game lu jadi kayak aplikasi beneran.</p>
-    <div class="step"><div class="num">1</div><div><b>Fullscreen, Tanpa Gangguan</b><span>Nggak ada lagi bar Chrome / Safari yang ganggu. Layar penuh buat main.</span></div></div>
-    <div class="step"><div class="num">2</div><div><b>Buka 1 Klik dari Home Screen</b><span>Nggak perlu buka browser & ketik link lagi. Pencet icon REF, langsung main.</span></div></div>
-    <div class="step"><div class="num">3</div><div><b>Login Google = Data Aman</b><span>Ganti HP pun progress lu aman. Asal login pake Google yang sama.</span></div></div>
-  </div>
-
+  <!-- CARD CARA INSTALL - SEKARANG JADI iOS / APPLE -->
   <div class="card" id="howToCard">
-    <h3 id="howToTitle">📱 Cara Install (Android)</h3>
-    <p id="howToDesc">Ikutin ini, 30 detik beres.</p>
-    <div class="step"><div class="num">1</div><div><b id="s1t">Pencet INSTALL JADI APLIKASI</b><span id="s1d">Tombol ungu di atas. Nanti muncul popup "Instal aplikasi?"</span></div></div>
-    <div class="step"><div class="num">2</div><div><b id="s2t">Pencet Instal</b><span id="s2d">Tunggu 2 detik, game ke-download jadi aplikasi.</span></div></div>
-    <div class="step"><div class="num">3</div><div><b id="s3t">Buka dari Home Screen</b><span id="s3d">Cari icon REF, pencet, langsung main fullscreen!</span></div></div>
+    <h3 id="howToTitle">Cara Install — iPhone / Apple</h3>
+    <p id="howToDesc">Ikuti langkah berikut di Safari.</p>
+    <div class="step"><div class="num">1</div><div><b id="s1t">Ketuk tombol Bagikan ⤴️</b><span id="s1d">Di bagian bawah Safari, ikon kotak dengan panah ke atas.</span></div></div>
+    <div class="step"><div class="num">2</div><div><b id="s2t">Pilih Add to Home Screen</b><span id="s2d">Gulir ke bawah pada menu Bagikan untuk menemukannya.</span></div></div>
+    <div class="step"><div class="num">3</div><div><b id="s3t">Ketuk Add</b><span id="s3d">Ikon REF akan muncul di Home Screen. Ketuk untuk bermain.</span></div></div>
   </div>
 
-  <a class="btn btn-wa" href="https://wa.me/?text=Bro%20cobain%20REF%20GAME%20nih%20🔥%20Gratis%2C%20bisa%20Login%20Google%2C%20data%20ke-save!%20Install%20jadi%20aplikasi%20di%20sini%3A%20https%3A%2F%2Fsupernovastudioo.github.io%2FRef-game%2Flink.html">💬 &nbsp;SHARE KE TEMEN LU</a>
-  <a class="btn btn-ghost" href="https://supernovastudioo.github.io/Ref-game/">Buka Versi Browser →</a>
+  <a class="btn btn-wa" href="https://wa.me/?text=REF%20GAME%20%E2%80%94%20by%20Supernova%20Studio.%20Mainkan.%20Simpan.%20Lanjutkan%20di%20mana%20saja.%20https%3A%2F%2Fsupernovastudioo.github.io%2FRef-game%2Flink.html">💬 &nbsp;BAGIKAN</a>
+  <a class="btn btn-ghost" href="https://supernovastudioo.github.io/Ref-game/">Buka di Browser →</a>
 
-  <p class="footer">© 2026 SUPERNOVA STUDIO • REF GAME<br>Dibuat dengan 🔥 di Indonesia.<br>Ada bug? Screenshot & kirim ke pembuat game ini.</p>
+  <p class="footer">© 2026 SUPERNOVA STUDIO • REF GAME<br>Indonesia</p>
 </div>
 
 <script>
@@ -106,37 +83,41 @@ const iosBox = document.getElementById('iosBox');
 const howToTitle = document.getElementById('howToTitle');
 const howToDesc = document.getElementById('howToDesc');
 
-// DETEKSI IPHONE / iOS
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isAndroid = /Android/i.test(navigator.userAgent);
 const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
 if (isStandalone) {
-  installBtn.textContent = "✅ UDAH KE-INSTALL - BUKA GAME";
+  installBtn.textContent = "✅ TERPASANG — BUKA GAME";
   installBtn.onclick = () => { window.location.href = "https://supernovastudioo.github.io/Ref-game/"; };
-  installNote.textContent = "Lu udah main dari aplikasi. Mantap!";
+  installNote.textContent = "Anda membuka dari aplikasi.";
   installNote.classList.add('green');
 }
 
+// Kalo yang buka Android, card-nya otomatis balik jadi cara Android
+// Kalo yang buka iPhone / Desktop, tetep tampil cara iOS kayak yang lu minta
+if (isAndroid && !isStandalone) {
+  howToTitle.textContent = "Cara Install — Android";
+  howToDesc.textContent = "Tiga langkah, selesai dalam hitungan detik.";
+  document.getElementById('s1t').textContent = "Ketuk INSTALL APLIKASI";
+  document.getElementById('s1d').textContent = "Tombol ungu di atas.";
+  document.getElementById('s2t').textContent = "Ketuk Instal";
+  document.getElementById('s2d').textContent = "Konfirmasi pada jendela yang muncul.";
+  document.getElementById('s3t').textContent = "Buka dari Home Screen";
+  document.getElementById('s3d').textContent = "Cari ikon REF untuk mulai bermain.";
+}
+
 if (isIOS && !isStandalone) {
-  // Di iPhone, sembunyiin tombol Android, tampilin cara iOS
   installBtn.style.display = 'none';
   installNote.style.display = 'none';
   iosBox.style.display = 'block';
-  howToTitle.textContent = "📱 Cara Install (iPhone / iOS)";
-  howToDesc.textContent = "iPhone nggak ada popup, caranya manual tapi gampang:";
-  document.getElementById('s1t').textContent = "Pencet tombol Share ⤴️ di Safari";
-  document.getElementById('s1d').textContent = "Di bawah layar Safari, icon kotak + panah ke atas.";
-  document.getElementById('s2t').textContent = "Pilih Add to Home Screen";
-  document.getElementById('s2d').textContent = "Scroll ke bawah dikit di menu Share, cari itu.";
-  document.getElementById('s3t').textContent = "Pencet Add, Beres!";
-  document.getElementById('s3d').textContent = "Icon REF nongol di Home Screen lu. Tinggal pencet buat main.";
 }
 
 window.addEventListener('beforeinstallprompt', (e) => {
   if (isIOS) return;
   e.preventDefault();
   deferredPrompt = e;
-  installNote.textContent = "✅ Siap! Pencet tombol ungu di atas buat Install.";
+  installNote.textContent = "Siap. Ketuk tombol di atas untuk menginstall.";
   installNote.classList.add('green');
 });
 
@@ -145,8 +126,8 @@ installBtn.addEventListener('click', async () => {
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     if (outcome === 'accepted') {
-      installNote.textContent = "🎉 Berhasil! Cek Home Screen lu, icon REF udah nongol!";
-      installBtn.textContent = "✅ UDAH KE-INSTALL - BUKA GAME";
+      installNote.textContent = "Berhasil terpasang. Lihat Home Screen Anda.";
+      installBtn.textContent = "✅ TERPASANG — BUKA GAME";
       installBtn.onclick = () => { window.location.href = "https://supernovastudioo.github.io/Ref-game/"; };
     }
     deferredPrompt = null;
@@ -154,13 +135,13 @@ installBtn.addEventListener('click', async () => {
     iosBox.style.display = 'block';
     iosBox.scrollIntoView({behavior:'smooth'});
   } else {
-    alert("Kalo popup belum muncul:\n1. Hapus installan lama dulu\n2. Buka game-nya, pencet 'Pasang aplikasi' di dalem game.");
+    alert("Jika jendela belum muncul:\n1. Hapus instalasi lama\n2. Buka game, lalu ketuk 'Pasang aplikasi' di dalam game.");
     window.location.href = "https://supernovastudioo.github.io/Ref-game/";
   }
 });
 
 window.addEventListener('appinstalled', () => {
-  installBtn.textContent = "✅ UDAH KE-INSTALL - BUKA GAME";
+  installBtn.textContent = "✅ TERPASANG — BUKA GAME";
 });
 
 if ('serviceWorker' in navigator) {
@@ -168,4 +149,4 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </body>
-                                                                                 </html>
+</html>
