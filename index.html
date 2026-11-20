@@ -291,6 +291,11 @@ svg *{transform-box:fill-box;transform-origin:center}
 #menu .gt .lg{display:block!important;height:0!important;padding:0!important;padding-bottom:100%!important;aspect-ratio:auto!important;overflow:hidden}
 #menu .gt .lg>svg{position:absolute;left:15%;top:15%;width:70%!important;height:70%!important}
 #menu .gt .lg>.lf{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;height:auto;border:0}
+.gt .lg.hi{background:none!important;overflow:hidden}
+.gt .lg.hi::after{display:none}
+.gt .lg>img.li{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;pointer-events:none}
+.hl img.li{width:100%;height:100%;border-radius:24%;object-fit:cover;display:block}
+
 nav#nav{padding:5px 6px max(env(safe-area-inset-bottom),5px)}nav#nav button{margin:0 2px;padding:4px 0;gap:1px;border-radius:14px;font-size:10px;min-width:0}nav#nav button i{font-size:19px;line-height:1.2}#nav button.on{background:#2fd49a26;color:#1f9d6b}#nav button i{position:relative}#nav .nvp{width:25px;height:25px;display:block;margin:0 auto}#nav .bdg{top:-2px;right:-6px}
 .sg div{border:0!important;border-radius:16px!important;padding:12px 4px!important;color:#223}
 .sg div:nth-child(1){background:#d6f2e3}.sg div:nth-child(2){background:#e4dcff}.sg div:nth-child(3){background:#fde3cf}.sg small{color:#445!important}
@@ -645,7 +650,12 @@ LG.i=`<svg viewBox="0 0 64 64"><g transform="rotate(-10 22 36)"><g class="bn"><r
 LG.h=`<svg viewBox="0 0 64 64"><rect x="4" y="12" width="56" height="44" rx="12" fill="#2f3d68"/><text x="32" y="43" font-size="22" font-weight="800" text-anchor="middle" fill="#ece8e0" font-family="Manrope,sans-serif">2+3</text><g class="bn d1"><circle cx="50" cy="12" r="10" fill="#69db7c"/><text x="50" y="17" font-size="14" font-weight="800" text-anchor="middle" fill="#1b1608" font-family="Manrope,sans-serif">5</text></g></svg>`;
 LG.w=`<svg viewBox="0 0 64 64"><g font-family="Manrope,sans-serif" font-weight="800" font-size="20" text-anchor="middle"><rect class="bn" x="4" y="18" width="26" height="28" rx="7" fill="#4a76c9"/><text x="17" y="39" fill="#ece8e0">K</text><rect class="bn d2" x="34" y="18" width="26" height="28" rx="7" fill="#d8b873"/><text x="47" y="39" fill="#1b1608">A</text></g></svg>`;
 LG.b=`<svg viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52" rx="9" fill="#16224f"/><g class="bn"><rect x="10" y="10" width="20" height="20" rx="5" fill="#e0556b"/><rect x="32" y="10" width="20" height="20" rx="5" fill="#f5d442"/></g><g class="bn d2"><rect x="10" y="32" width="20" height="20" rx="5" fill="#4fc47d"/></g></svg>`;
-const GAMES=[{k:'g',n:'Gabung',d:'Geser dan satukan angka',i:LG.g},{k:'s',n:'Menara',d:'Tap tepat untuk menumpuk blok',i:LG.s},{k:'d',n:'Lincah',d:'Lompat setinggi mungkin, hindari bahaya',i:LG.d},{k:'u',n:'Sudoku',d:'Isi angka 1–9, tanpa pengulangan',i:LG.u},{k:'i',n:'Ingat',d:'Ingat posisi, cocokkan pasangan kartu',i:LG.i},{k:'h',n:'Hitung',d:'Jawab hitungan cepat',i:LG.h},{k:'w',n:'Kosa Kata',d:'Hubungkan huruf jadi kosa kata',i:LG.w},{k:'b',n:'Block Blast',d:'Susun blok, hapus baris',i:LG.b}];
+/* LOGO CUSTOM: taruh gambar di folder logos/ lalu daftarkan kunci game di sini.
+   k: g=Gabung s=Menara d=Lincah u=Sudoku i=Ingat h=Hitung w=Kosa Kata b=Block Blast
+   Kalau file tidak ada/gagal load, otomatis balik ke logo SVG bawaan. */
+const LOGO_IMG={w:'logos/w.webp'};
+const lgx=k=>LOGO_IMG[k]?`<img class="li" src="${LOGO_IMG[k]}" alt="" draggable="false" onerror="this.parentNode.classList.remove('hi');this.outerHTML=LG['${k}']">`:LG[k];
+const GAMES=[{k:'g',n:'Gabung',d:'Geser dan satukan angka',i:lgx('g')},{k:'s',n:'Menara',d:'Tap tepat untuk menumpuk blok',i:lgx('s')},{k:'d',n:'Lincah',d:'Lompat setinggi mungkin, hindari bahaya',i:lgx('d')},{k:'u',n:'Sudoku',d:'Isi angka 1–9, tanpa pengulangan',i:lgx('u')},{k:'i',n:'Ingat',d:'Ingat posisi, cocokkan pasangan kartu',i:lgx('i')},{k:'h',n:'Hitung',d:'Jawab hitungan cepat',i:lgx('h')},{k:'w',n:'Kosa Kata',d:'Hubungkan huruf jadi kosa kata',i:lgx('w')},{k:'b',n:'Block Blast',d:'Susun blok, hapus baris',i:lgx('b')}];
 const NE={g:'Merge',s:'Tower',d:'Jump',u:'Sudoku',i:'Memory',h:'Math',w:'Words',b:'Block Blast'};GAMES.forEach(g=>{const n=g.n;Object.defineProperty(g,'n',{get:()=>LANG()==='id'?n:NE[g.k]})});
 const NM={Pemula:'Rookie',Pengamat:'Observer',Cekatan:'Adept',Ahli:'Expert',Legenda:'Legend',Kayu:'Wood',Perak:'Silver',Emas:'Gold',Daun:'Leaf',Sayap:'Wings',Mahkota:'Crown',Kucing:'Cat',Anjing:'Dog',Kelinci:'Rabbit',Rubah:'Fox',Beruang:'Bear',Hantu:'Owl',Katak:'Frog',Singa:'Lion',Api:'Fire',Kristal:'Crystal',Malam:'Night',Hutan:'Forest',Senja:'Dusk',Samudra:'Ocean',Galaksi:'Galaxy','Permen Pop':'Candy Pop'},N=x=>LANG()==='id'?x:(NM[x]||x);
 const ACE={a1:['First steps','Finish 1 game'],a2:['Explorer','Try every game'],a3:['Three stars','Get 3 ◆ in one game'],a4:['Dedicated','3-day streak'],a5:['Moving up','Reach Level 5'],a6:['Veteran','Play 25 times'],a7:['Collector','Own 2 themes'],a8:['Missions done','Claim 10 missions']},an=a=>LANG()==='id'?a.n:(ACE[a.id]||[a.n])[0],ad=a=>LANG()==='id'?a.d:(ACE[a.id]||[0,a.d])[1];
@@ -786,7 +796,7 @@ function menu(){
   $('#pf').innerHTML=`${av(44,D.fr,D.ai)}<span class="tx"><b>${esc(n)}</b><small>Lv ${L.l}${stk()?' · 🔥'+D.st.n:''}</small><i class="pb"><u style="width:${L.x/L.n*100}%"></u></i></span>${badge(L.l,26)}`;
   $('#pf').onclick=null;$('#pf').style.cursor='default';
   $('#gl').innerHTML=GAMES.map(g=>{const b=best(g.k),gl=GOALS[g.k]||[],m=gl.filter(x=>b>=x).length;
-    return `<div class="gt" data-k="${g.k}"><span class="lg" style="background:${PAL[g.k.charCodeAt(0)%PAL.length]}">${g.i||'<span class="lf">'+esc(g.n[0])+'</span>'}</span><b>${g.n}</b></div>`}).join('');
+    return `<div class="gt" data-k="${g.k}"><span class="lg${LOGO_IMG[g.k]?' hi':''}" style="background:${PAL[g.k.charCodeAt(0)%PAL.length]}">${g.i||'<span class="lf">'+esc(g.n[0])+'</span>'}</span><b>${g.n}</b></div>`}).join('');
   document.querySelectorAll('.gt').forEach(e=>{let t,lp=0;const k=e.dataset.k;e.addEventListener('touchstart',()=>{lp=0;t=setTimeout(()=>{lp=1;vib(15);tut(k,close)},550)},{passive:true});['touchend','touchmove','touchcancel'].forEach(v=>e.addEventListener(v,()=>clearTimeout(t),{passive:true}));e.oncontextmenu=v=>v.preventDefault();e.onclick=()=>{if(lp){lp=0;return}k&&play(k)}});
   $('#sc1').textContent=T('Semua game 🎮','All games 🎮');
   const DD=day(new Date()),DG=GAMES[hs(DD+'c')%GAMES.length],DR=D.dc&&D.dc.d===DD?D.dc:null,mm=dm(),mc=mis().filter((x,i)=>x.v>=1&&!mm.cl.includes(i)).length;
